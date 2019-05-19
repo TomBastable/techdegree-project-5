@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2FE8D572271B4C000D914B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE8D562271B4C000D914B2 /* AppDelegate.swift */; };
+		F2FE8D592271B4C000D914B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE8D582271B4C000D914B2 /* ViewController.swift */; };
+		F2FE8D5C2271B4C000D914B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2FE8D5A2271B4C000D914B2 /* Main.storyboard */; };
+		F2FE8D5E2271B4C200D914B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2FE8D5D2271B4C200D914B2 /* Assets.xcassets */; };
+		F2FE8D612271B4C200D914B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2FE8D5F2271B4C200D914B2 /* LaunchScreen.storyboard */; };
+		F2FE8D6C2271B4C200D914B2 /* Amusement_Park_EntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE8D6B2271B4C200D914B2 /* Amusement_Park_EntryTests.swift */; };
+		F2FE8D772271B4C200D914B2 /* Amusement_Park_EntryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE8D762271B4C200D914B2 /* Amusement_Park_EntryUITests.swift */; };
+		F2FE8D852271B66500D914B2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE8D842271B66500D914B2 /* Errors.swift */; };
+		F2FE8D872271B92200D914B2 /* Employees.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE8D862271B92200D914B2 /* Employees.swift */; };
+		F2FE8D892271C9B900D914B2 /* AreaAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE8D882271C9B900D914B2 /* AreaAccess.swift */; };
+		F2FE8D8B2271CD4500D914B2 /* Guests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE8D8A2271CD4500D914B2 /* Guests.swift */; };
+		F2FE8D8D2271E56F00D914B2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE8D8C2271E56F00D914B2 /* Protocols.swift */; };
+		F2FE8D8F2272F17000D914B2 /* Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE8D8E2272F17000D914B2 /* Swipe.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2FE8D682271B4C200D914B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2FE8D4B2271B4C000D914B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2FE8D522271B4C000D914B2;
+			remoteInfo = "Amusement Park Entry";
+		};
+		F2FE8D732271B4C200D914B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2FE8D4B2271B4C000D914B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2FE8D522271B4C000D914B2;
+			remoteInfo = "Amusement Park Entry";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F2FE8D532271B4C000D914B2 /* Amusement Park Entry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amusement Park Entry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2FE8D562271B4C000D914B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2FE8D582271B4C000D914B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2FE8D5B2271B4C000D914B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2FE8D5D2271B4C200D914B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2FE8D602271B4C200D914B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2FE8D622271B4C200D914B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2FE8D672271B4C200D914B2 /* Amusement Park EntryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Amusement Park EntryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2FE8D6B2271B4C200D914B2 /* Amusement_Park_EntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amusement_Park_EntryTests.swift; sourceTree = "<group>"; };
+		F2FE8D6D2271B4C200D914B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2FE8D722271B4C200D914B2 /* Amusement Park EntryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Amusement Park EntryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2FE8D762271B4C200D914B2 /* Amusement_Park_EntryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amusement_Park_EntryUITests.swift; sourceTree = "<group>"; };
+		F2FE8D782271B4C200D914B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2FE8D842271B66500D914B2 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		F2FE8D862271B92200D914B2 /* Employees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employees.swift; sourceTree = "<group>"; };
+		F2FE8D882271C9B900D914B2 /* AreaAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaAccess.swift; sourceTree = "<group>"; };
+		F2FE8D8A2271CD4500D914B2 /* Guests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guests.swift; sourceTree = "<group>"; };
+		F2FE8D8C2271E56F00D914B2 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		F2FE8D8E2272F17000D914B2 /* Swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2FE8D502271B4C000D914B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2FE8D642271B4C200D914B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2FE8D6F2271B4C200D914B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2FE8D4A2271B4C000D914B2 = {
+			isa = PBXGroup;
+			children = (
+				F2FE8D552271B4C000D914B2 /* Amusement Park Entry */,
+				F2FE8D6A2271B4C200D914B2 /* Amusement Park EntryTests */,
+				F2FE8D752271B4C200D914B2 /* Amusement Park EntryUITests */,
+				F2FE8D542271B4C000D914B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2FE8D542271B4C000D914B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2FE8D532271B4C000D914B2 /* Amusement Park Entry.app */,
+				F2FE8D672271B4C200D914B2 /* Amusement Park EntryTests.xctest */,
+				F2FE8D722271B4C200D914B2 /* Amusement Park EntryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2FE8D552271B4C000D914B2 /* Amusement Park Entry */ = {
+			isa = PBXGroup;
+			children = (
+				F2FE8D562271B4C000D914B2 /* AppDelegate.swift */,
+				F2FE8D582271B4C000D914B2 /* ViewController.swift */,
+				F2FE8D5A2271B4C000D914B2 /* Main.storyboard */,
+				F2FE8D5D2271B4C200D914B2 /* Assets.xcassets */,
+				F2FE8D5F2271B4C200D914B2 /* LaunchScreen.storyboard */,
+				F2FE8D622271B4C200D914B2 /* Info.plist */,
+				F2FE8D842271B66500D914B2 /* Errors.swift */,
+				F2FE8D862271B92200D914B2 /* Employees.swift */,
+				F2FE8D882271C9B900D914B2 /* AreaAccess.swift */,
+				F2FE8D8A2271CD4500D914B2 /* Guests.swift */,
+				F2FE8D8C2271E56F00D914B2 /* Protocols.swift */,
+				F2FE8D8E2272F17000D914B2 /* Swipe.swift */,
+			);
+			path = "Amusement Park Entry";
+			sourceTree = "<group>";
+		};
+		F2FE8D6A2271B4C200D914B2 /* Amusement Park EntryTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2FE8D6B2271B4C200D914B2 /* Amusement_Park_EntryTests.swift */,
+				F2FE8D6D2271B4C200D914B2 /* Info.plist */,
+			);
+			path = "Amusement Park EntryTests";
+			sourceTree = "<group>";
+		};
+		F2FE8D752271B4C200D914B2 /* Amusement Park EntryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F2FE8D762271B4C200D914B2 /* Amusement_Park_EntryUITests.swift */,
+				F2FE8D782271B4C200D914B2 /* Info.plist */,
+			);
+			path = "Amusement Park EntryUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2FE8D522271B4C000D914B2 /* Amusement Park Entry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2FE8D7B2271B4C200D914B2 /* Build configuration list for PBXNativeTarget "Amusement Park Entry" */;
+			buildPhases = (
+				F2FE8D4F2271B4C000D914B2 /* Sources */,
+				F2FE8D502271B4C000D914B2 /* Frameworks */,
+				F2FE8D512271B4C000D914B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Amusement Park Entry";
+			productName = "Amusement Park Entry";
+			productReference = F2FE8D532271B4C000D914B2 /* Amusement Park Entry.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2FE8D662271B4C200D914B2 /* Amusement Park EntryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2FE8D7E2271B4C200D914B2 /* Build configuration list for PBXNativeTarget "Amusement Park EntryTests" */;
+			buildPhases = (
+				F2FE8D632271B4C200D914B2 /* Sources */,
+				F2FE8D642271B4C200D914B2 /* Frameworks */,
+				F2FE8D652271B4C200D914B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2FE8D692271B4C200D914B2 /* PBXTargetDependency */,
+			);
+			name = "Amusement Park EntryTests";
+			productName = "Amusement Park EntryTests";
+			productReference = F2FE8D672271B4C200D914B2 /* Amusement Park EntryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F2FE8D712271B4C200D914B2 /* Amusement Park EntryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2FE8D812271B4C200D914B2 /* Build configuration list for PBXNativeTarget "Amusement Park EntryUITests" */;
+			buildPhases = (
+				F2FE8D6E2271B4C200D914B2 /* Sources */,
+				F2FE8D6F2271B4C200D914B2 /* Frameworks */,
+				F2FE8D702271B4C200D914B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2FE8D742271B4C200D914B2 /* PBXTargetDependency */,
+			);
+			name = "Amusement Park EntryUITests";
+			productName = "Amusement Park EntryUITests";
+			productReference = F2FE8D722271B4C200D914B2 /* Amusement Park EntryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2FE8D4B2271B4C000D914B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Tom Bastable";
+				TargetAttributes = {
+					F2FE8D522271B4C000D914B2 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					F2FE8D662271B4C200D914B2 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = F2FE8D522271B4C000D914B2;
+					};
+					F2FE8D712271B4C200D914B2 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = F2FE8D522271B4C000D914B2;
+					};
+				};
+			};
+			buildConfigurationList = F2FE8D4E2271B4C000D914B2 /* Build configuration list for PBXProject "Amusement Park Entry" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2FE8D4A2271B4C000D914B2;
+			productRefGroup = F2FE8D542271B4C000D914B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2FE8D522271B4C000D914B2 /* Amusement Park Entry */,
+				F2FE8D662271B4C200D914B2 /* Amusement Park EntryTests */,
+				F2FE8D712271B4C200D914B2 /* Amusement Park EntryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2FE8D512271B4C000D914B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2FE8D612271B4C200D914B2 /* LaunchScreen.storyboard in Resources */,
+				F2FE8D5E2271B4C200D914B2 /* Assets.xcassets in Resources */,
+				F2FE8D5C2271B4C000D914B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2FE8D652271B4C200D914B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2FE8D702271B4C200D914B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2FE8D4F2271B4C000D914B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2FE8D892271C9B900D914B2 /* AreaAccess.swift in Sources */,
+				F2FE8D592271B4C000D914B2 /* ViewController.swift in Sources */,
+				F2FE8D8D2271E56F00D914B2 /* Protocols.swift in Sources */,
+				F2FE8D872271B92200D914B2 /* Employees.swift in Sources */,
+				F2FE8D852271B66500D914B2 /* Errors.swift in Sources */,
+				F2FE8D8B2271CD4500D914B2 /* Guests.swift in Sources */,
+				F2FE8D8F2272F17000D914B2 /* Swipe.swift in Sources */,
+				F2FE8D572271B4C000D914B2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2FE8D632271B4C200D914B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2FE8D6C2271B4C200D914B2 /* Amusement_Park_EntryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2FE8D6E2271B4C200D914B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2FE8D772271B4C200D914B2 /* Amusement_Park_EntryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2FE8D692271B4C200D914B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2FE8D522271B4C000D914B2 /* Amusement Park Entry */;
+			targetProxy = F2FE8D682271B4C200D914B2 /* PBXContainerItemProxy */;
+		};
+		F2FE8D742271B4C200D914B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2FE8D522271B4C000D914B2 /* Amusement Park Entry */;
+			targetProxy = F2FE8D732271B4C200D914B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F2FE8D5A2271B4C000D914B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2FE8D5B2271B4C000D914B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2FE8D5F2271B4C200D914B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2FE8D602271B4C200D914B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2FE8D792271B4C200D914B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F2FE8D7A2271B4C200D914B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2FE8D7C2271B4C200D914B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 947BDAE7U7;
+				INFOPLIST_FILE = "Amusement Park Entry/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bedhair.Amusement-Park-Entry";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2FE8D7D2271B4C200D914B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 947BDAE7U7;
+				INFOPLIST_FILE = "Amusement Park Entry/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bedhair.Amusement-Park-Entry";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F2FE8D7F2271B4C200D914B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Amusement Park EntryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bedhair.Amusement-Park-EntryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amusement Park Entry.app/Amusement Park Entry";
+			};
+			name = Debug;
+		};
+		F2FE8D802271B4C200D914B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Amusement Park EntryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bedhair.Amusement-Park-EntryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amusement Park Entry.app/Amusement Park Entry";
+			};
+			name = Release;
+		};
+		F2FE8D822271B4C200D914B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Amusement Park EntryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bedhair.Amusement-Park-EntryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Amusement Park Entry";
+			};
+			name = Debug;
+		};
+		F2FE8D832271B4C200D914B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Amusement Park EntryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bedhair.Amusement-Park-EntryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Amusement Park Entry";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2FE8D4E2271B4C000D914B2 /* Build configuration list for PBXProject "Amusement Park Entry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2FE8D792271B4C200D914B2 /* Debug */,
+				F2FE8D7A2271B4C200D914B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2FE8D7B2271B4C200D914B2 /* Build configuration list for PBXNativeTarget "Amusement Park Entry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2FE8D7C2271B4C200D914B2 /* Debug */,
+				F2FE8D7D2271B4C200D914B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2FE8D7E2271B4C200D914B2 /* Build configuration list for PBXNativeTarget "Amusement Park EntryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2FE8D7F2271B4C200D914B2 /* Debug */,
+				F2FE8D802271B4C200D914B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2FE8D812271B4C200D914B2 /* Build configuration list for PBXNativeTarget "Amusement Park EntryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2FE8D822271B4C200D914B2 /* Debug */,
+				F2FE8D832271B4C200D914B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2FE8D4B2271B4C000D914B2 /* Project object */;
+}
