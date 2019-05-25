@@ -19,5 +19,15 @@ enum PassCreationError: Error {
     case cityRequired
     case stateRequired
     case zipRequired
+    case projectIdRequired
+    case vendorCompanyRequired
+    case dateofVisitRequired
+    case stringToDateConversionError
+    
+}
+
+enum PassSwipeError: Error{
+    
+    case swipedTooRecently
     
 }

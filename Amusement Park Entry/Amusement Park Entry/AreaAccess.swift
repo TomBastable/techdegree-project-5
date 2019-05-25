@@ -17,5 +17,6 @@ enum AreaAccess {
     case officeAreas
     case shopDiscount
     case foodDiscount
+    case rideEntry
     
 }
