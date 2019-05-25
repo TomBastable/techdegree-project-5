@@ -29,5 +29,6 @@ enum PassCreationError: Error {
 enum PassSwipeError: Error{
     
     case swipedTooRecently
+    case accessDenied
     
 }

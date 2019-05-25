@@ -973,7 +973,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             playGrantedSound()
                 
             }else if !doesHaveAccess {
-                
+            displayAlertWith(error: PassSwipeError.accessDenied)
             resultsField.backgroundColor = .red
             resultsField.text = "ACCESS DENIED"
             resultsField.textColor = .white
@@ -1044,6 +1044,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         case PassSwipeError.swipedTooRecently:
             title = "Pass Swiped Too Recently"
             subTitle = "Please allow 5 seconds between swipes"
+            buttonTitle = "OK"
+        case PassSwipeError.accessDenied:
+            title = "No Access To This Location"
+            subTitle = "Access Denied"
             buttonTitle = "OK"
         default:
             title = "Error"
