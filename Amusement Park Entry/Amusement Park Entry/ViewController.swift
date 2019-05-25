@@ -117,12 +117,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         dateOfBirth.inputView = datePickerView
         dateOfVisit.inputView = datePickerView
         
+        //Picker view init
         datePickerView.datePickerMode = UIDatePicker.Mode.date
-        
         datePickerView.maximumDate = Date()
-        
         datePickerView.addTarget(self, action: #selector(ViewController.datePickerValueChanged), for: UIControl.Event.valueChanged)
-        
         pickerViewVendors.delegate = self
         pickerViewVendors.dataSource = self
         pickerViewProjects.dataSource = self
@@ -148,13 +146,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         dateOfVisit.inputAccessoryView = toolBar
         vendorCompany.inputAccessoryView = toolBar
         projectSelection.inputAccessoryView = toolBar
+        
     }
+    
+    //Picker functions
     
     @objc func doneDatePickerPressed(){
+        
         self.view.endEditing(true)
     }
-    
-    
     
     @objc func datePickerValueChanged(sender:UIDatePicker) {
         
@@ -213,6 +213,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
+    //Observers for the keyboard - to move the screen so editing is visible
+    
     @objc func keyboardWillShow(sender: NSNotification) {
         self.view.frame.origin.y = -150 // Move view 150 points upward
     }
@@ -222,6 +224,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func topMenuPressed(_ sender: UIButton) {
+        
+        //setup UI depending on the selected pass
         
         dateOfVisit.text = ""
         dateOfBirth.text = ""
@@ -478,7 +482,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func populateFields(_ sender: Any) {
-        
+        //populate fields, depending on if they're enabled
         if dateOfBirth.isEnabled { dateOfBirth.text = "Apr 21, 2019"}
         if dateOfVisit.isEnabled { dateOfVisit.text = "Apr 21, 2019"}
         if vendorCompany.isEnabled { vendorCompany.text = "Acme"}
@@ -488,13 +492,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if streetAddressTextField.isEnabled { streetAddressTextField.text = "221b Baker Street"}
         if cityTextField.isEnabled { cityTextField.text = "London"}
         if stateTextField.isEnabled { stateTextField.text = "Bespin"}
-        if zipTextField.isEnabled { zipTextField.text = "1.21 gigawatts"}
+        if zipTextField.isEnabled { zipTextField.text = "90120"}
         
     }
     
     
     func disableAllFields(){
-        
+        //disable all fields, so that each case just enables the relevant fields - reducing code slightly
         dateOfBirth.isEnabled = false
         dateOfBirth.alpha = 0.5
         dobLabel.alpha = 0.5
@@ -583,6 +587,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                             throw PassCreationError.lastNameRequired
                         }
                         
+                        if lastName.count < 2{
+                            throw PassCreationError.lastNameRequired
+                        } else if firstName.count < 2{
+                            throw PassCreationError.firstNameRequired
+                        }
+                        
                         let pass = try seniorGuest(firstName: firstName, lastName: lastName, dateOfBirth: date)
                         
                         currentPass = pass
@@ -630,6 +640,25 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                         throw PassCreationError.zipRequired
                     }
                     
+                    if lastName.count < 2{
+                        throw PassCreationError.lastNameRequired
+                    }
+                    if firstName.count < 2{
+                        throw PassCreationError.firstNameRequired
+                    }
+                    if streetAddress.count < 5{
+                        throw PassCreationError.streetAddressRequired
+                    }
+                    if city.count < 2{
+                        throw PassCreationError.cityRequired
+                    }
+                    if state.count < 2{
+                        throw PassCreationError.stateRequired
+                    }
+                    if zip.count < 2 || !zip.isNumeric {
+                        throw PassCreationError.zipRequired
+                    }
+                    
                     let pass = try seasonPassGuest(firstName: firstName, lastName: lastName, streetAddress: streetAddress, city: city, state: state, zipPostCode: zip)
                     
                     currentPass = pass
@@ -670,6 +699,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 }
                 
                 guard let zip: String = zipTextField.text, zipTextField.text != "" else {
+                    throw PassCreationError.zipRequired
+                }
+                
+                print(zip.isNumeric)
+                
+                if lastName.count < 2{
+                    throw PassCreationError.lastNameRequired
+                }
+                if firstName.count < 2{
+                    throw PassCreationError.firstNameRequired
+                }
+                if streetAddress.count < 5{
+                    throw PassCreationError.streetAddressRequired
+                }
+                if city.count < 2{
+                    throw PassCreationError.cityRequired
+                }
+                if state.count < 2{
+                    throw PassCreationError.stateRequired
+                }
+                if zip.count < 2 || !zip.isNumeric {
                     throw PassCreationError.zipRequired
                 }
                 
@@ -715,6 +765,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     pass = try contractEmployee(firstName: firstName, lastName: lastName, streetAddress: streetAddress, city: city, state: state, zipPostCode: zip, project: projId)
                     
                 }
+                
                 currentPass = pass
                 presentPassView()
                 
@@ -749,8 +800,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                         throw PassCreationError.firstNameRequired
                     }
                     
-                    guard let lastName: String = lastNameTextField.text, lastNameTextField.text != "", lastNameTextField.text!.count > 2 else{
+                    guard let lastName: String = lastNameTextField.text, lastNameTextField.text != "" else{
                         throw PassCreationError.lastNameRequired
+                    }
+                    
+                    if lastName.count < 2{
+                        throw PassCreationError.lastNameRequired
+                    } else if firstName.count < 2{
+                        throw PassCreationError.firstNameRequired
                     }
                     
                     var vndrCompany: VendorCompany? = nil
@@ -800,6 +857,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
+    // Display the pass details in passview
     func presentPassView(){
         
         
@@ -838,12 +896,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func closePassScreen(_ sender: Any) {
         
+        //Hide passview and touch guestMenu, which in turn touches the free child option
         self.passView.isHidden = true
         
         topMenuPressed(guestMenuButton)
         
         currentPass = nil
         
+        //result resultsfield appearance
         resultsField.backgroundColor = .clear
         
         resultsField.text = "Test Results"
@@ -852,8 +912,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
+    // Test Swipe Button
+    
     @IBAction func testSwipes(_ sender: UIButton) {
-        
+        //Determine the swipe location
         let swipeLocation: AreaAccess
         
         switch sender {
@@ -884,24 +946,25 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         hasAccess = try currentPass?.swipe(atLocation: swipeLocation)
             
         }catch PassSwipeError.swipedTooRecently{
-            
+            //Catch swiped too recently error, display alert based on the error
             displayAlertWith(error: PassSwipeError.swipedTooRecently)
             
         }catch{
                 print(error)
         }
         
+        //Unwrap Bool
         guard let doesHaveAccess = hasAccess else{
             
             return
             
         }
-        
+            //Dealth the access bool value
             if doesHaveAccess{
                 
             resultsField.backgroundColor = .green
             resultsField.text = "ACCESS GRANTED"
-                
+                // If it's a shop that has swiped the pass, display relevant discount
                 if swipeLocation == .foodDiscount {resultsField.text = foodDiscountLabel.text}
                 if swipeLocation == .shopDiscount {resultsField.text = merchDiscountLabel.text}
                 
@@ -932,7 +995,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         switch error {
         case PassCreationError.dateOfBirthRequired:
             title = "Date of Birth Required"
-            subTitle = "Please ensure you enter a date of birth"
+            subTitle = "Please ensure you select a date of birth"
             buttonTitle = "OK"
         case PassCreationError.firstNameRequired:
             title = "First name required"
@@ -948,19 +1011,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             buttonTitle = "OK"
         case PassCreationError.streetAddressRequired:
             title = "Street Address Required"
-            subTitle = "Please ensure you enter a street address"
+            subTitle = "Please ensure you enter a street address of at least 5 characters"
             buttonTitle = "OK"
         case PassCreationError.cityRequired:
             title = "City Required"
-            subTitle = "Please ensure you enter a city"
+            subTitle = "Please ensure you enter a city of at least 2 characters"
             buttonTitle = "OK"
         case PassCreationError.stateRequired:
             title = "State Required"
-            subTitle = "Please ensure you select a state"
+            subTitle = "Please ensure you select a state of at least 2 characters"
             buttonTitle = "OK"
         case PassCreationError.zipRequired:
             title = "Zip Required"
-            subTitle = "Please ensure you select a zip"
+            subTitle = "Please ensure you select a zip that is numerical"
             buttonTitle = "OK"
         case PassCreationError.projectIdRequired:
             title = "Project ID Required"
@@ -996,6 +1059,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
+    // Another function to stop repeat code
+    
     func dateFromString(_ string: String) throws -> Date?  {
         
         let dateFormatter = DateFormatter()
@@ -1023,6 +1088,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
+    // Sound init code
+    
     func loadGameStartSound() {
         
         let pathToCorrectSoundFile = Bundle.main.path(forResource: "AccessGranted", ofType: "wav")
@@ -1045,6 +1112,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         AudioServicesPlaySystemSound(accessGrantedSound)
     }
     
+    //Observer function for the Birthday Alert
+    
     @objc func birthdayAlert(){
         
         let alert = UIAlertController(title: "Happy Birthday!!", message: "Have a 1337 Birthday!", preferredStyle: .alert)
@@ -1055,5 +1124,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         print("birthday alert")
     }
+    
 }
 
+//String extension for zip code auth
+
+extension String {
+    var isNumeric: Bool {
+        guard self.count > 0 else { return false }
+        let nums: Set<Character> = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        return Set(self).isSubset(of: nums)
+    }
+}
