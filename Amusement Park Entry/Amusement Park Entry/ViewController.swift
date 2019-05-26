@@ -146,7 +146,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         dateOfVisit.inputAccessoryView = toolBar
         vendorCompany.inputAccessoryView = toolBar
         projectSelection.inputAccessoryView = toolBar
-        
+        self.resultsField.isEnabled = false
     }
     
     //Picker functions

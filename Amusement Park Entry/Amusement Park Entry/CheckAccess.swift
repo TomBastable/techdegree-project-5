@@ -110,7 +110,7 @@ func applyTimedPassBlock(toPass pass: blockedPass){
     
 }
 
-class blockedPass: Equatable{
+class blockedPass: Equatable {
     
     static func == (lhs: blockedPass, rhs: blockedPass) -> Bool {
         return lhs.location == rhs.location && lhs.passId == rhs.passId
