@@ -9,22 +9,20 @@
 import Foundation
 import UIKit
 
-var fiveSecondBlockedEntrants: [Int] = []
+var fiveSecondBlockedEntrants: [blockedPass] = []
 
 func checkAccess(swipeLocation: AreaAccess, pass: Entrant) throws -> Bool {
     
     var entrantDoesHaveAccess: Bool = false
     let entrantDateOfBirth: Date? = pass.dateOfBirth
     let entrantAreaAccess: [AreaAccess] = pass.areaAccess
-    
+    let comparisonPass = blockedPass(passId: pass.uniquePassID, location: swipeLocation)
     //check for double swipe
     
-    if fiveSecondBlockedEntrants.contains(pass.uniquePassID){
+    if fiveSecondBlockedEntrants.contains(comparisonPass){
+        
         print("Access Denied - pass was swiped too recently.")
         throw PassSwipeError.swipedTooRecently
-        
-        // Play Denied Sound
-        //
         
     }
     else {
@@ -71,7 +69,7 @@ func checkAccess(swipeLocation: AreaAccess, pass: Entrant) throws -> Bool {
         }
         
         // Apply a timed block for the pass
-        applyTimedPassBlock(pass.uniquePassID)
+        applyTimedPassBlock(toPass: comparisonPass)
         
         return true
         
@@ -84,7 +82,7 @@ func checkAccess(swipeLocation: AreaAccess, pass: Entrant) throws -> Bool {
         
         //Applied timed block for the pass
         
-        applyTimedPassBlock(pass.uniquePassID)
+        applyTimedPassBlock(toPass: comparisonPass)
         
         return false
         
@@ -92,22 +90,41 @@ func checkAccess(swipeLocation: AreaAccess, pass: Entrant) throws -> Bool {
 
 }
 
-func applyTimedPassBlock(_ passID: Int){
+func applyTimedPassBlock(toPass pass: blockedPass){
     
     // Add unique pass ID to a stack of blocked ID's that are blocked for 5 seconds.
     
-    fiveSecondBlockedEntrants.append(passID)
+    fiveSecondBlockedEntrants.append(pass)
     
     DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
         
         let index = fiveSecondBlockedEntrants.firstIndex(where: { (item) -> Bool in
-            item == passID 
+            item == pass
         })
         
         fiveSecondBlockedEntrants.remove(at: index!)
         
-        print("Pass is now unblocked \(passID)")
+        print("Pass is now unblocked \(pass)")
         
     })
+    
+}
+
+class blockedPass: Equatable{
+    
+    static func == (lhs: blockedPass, rhs: blockedPass) -> Bool {
+        return lhs.location == rhs.location && lhs.passId == rhs.passId
+    }
+    
+    
+    let passId: Int
+    let location: AreaAccess
+    
+    init(passId: Int, location: AreaAccess) {
+        
+        self.passId = passId
+        self.location = location
+        
+    }
     
 }

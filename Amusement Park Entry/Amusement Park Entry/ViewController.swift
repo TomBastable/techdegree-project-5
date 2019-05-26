@@ -550,6 +550,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                             throw PassCreationError.stringToDateConversionError
                         }
                         
+                        if date.age > 5{
+                            throw PassCreationError.childIsTooOld
+                        }
+                        
                         let pass = try freeChildGuest(dateOfBirth: date)
                         
                         print(pass, "pass")
@@ -1049,6 +1053,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             title = "No Access To This Location"
             subTitle = "Access Denied"
             buttonTitle = "OK"
+        case PassCreationError.childIsTooOld:
+            title = "Too Old"
+            subTitle = "A Child entering for free must be 5 years old or younger."
+            buttonTitle = "OK"
         default:
             title = "Error"
             subTitle = "\(error)"
@@ -1138,5 +1146,11 @@ extension String {
         guard self.count > 0 else { return false }
         let nums: Set<Character> = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         return Set(self).isSubset(of: nums)
+    }
+}
+
+extension Date {
+    var age: Int {
+        return Calendar.current.dateComponents([.year], from: self, to: Date()).year!
     }
 }

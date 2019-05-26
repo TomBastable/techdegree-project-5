@@ -23,6 +23,7 @@ enum PassCreationError: Error {
     case vendorCompanyRequired
     case dateofVisitRequired
     case stringToDateConversionError
+    case childIsTooOld
     
 }
 
