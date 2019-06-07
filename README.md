@@ -2,6 +2,8 @@
 
 Grade Attempted: Exceeds Expectations
 
+Grade Acheived: Exceeds Expectations
+
 Project Brief:
 
 You will now take the foundation you created in Project 4 (Amusement Park Generator (I)) and add the User Interface for the app, along with a short list of new features and entrant types handling. You might need to refactor some code in order to accommodate these changes.
